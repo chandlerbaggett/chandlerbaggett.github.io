@@ -25,7 +25,17 @@ div {text-align: center;}
 <div style="color:#CFB87C";>Calculate Sample Size for a Mean:</div><br>
 <div class="myDiv">
 <label for="levelOfConfidenceMean">Level of Confidence:</label><br>
-  <input type="text" id="levelOfConfidenceMean" name="levelOfConfidenceMean"><br><br>
+  <select name="levelOfConfidenceMean" id="levelOfConfidenceMean">
+    <option value="ninetyeightMean">98%</option>
+    <option value="ninetysevenMean">97%</option>
+    <option value="ninetysixMean">96%</option>
+    <option value="ninetyfiveMean">95%</option>
+    <option value="ninetyfourMean">94%</option>
+    <option value="ninetythreeMean">93%</option>
+    <option value="ninetytwoMean">92%</option>
+    <option value="ninetyoneMean">91%</option>
+    <option value="ninetyMean">90%</option>
+  </select><br><br>
 <label for="expectedStandardDeviation">Standard Deviation:</label><br>
   <div>5</div><br><br>
 <label for="marginOfErrorMean">Margin of Error:</label><br>
@@ -34,7 +44,17 @@ div {text-align: center;}
   <div id="meanDiv" style="display:none"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup></math></div><br><br>
 <div style="color:#CFB87C";>Calculate Sample Size for a Proportion:</div><br>
 <label for="levelOfConfidenceProportion">Level of Confidence:</label><br>
-  <input type="text" id="levelOfConfidenceProportion" name="levelOfConfidenceProportion"><br><br>
+  <select name="levelOfConfidenceProportion" id="levelOfConfidenceProportion">
+    <option value="ninetyeightProportion">98%</option>
+    <option value="ninetysevenProportion">97%</option>
+    <option value="ninetysixProportion">96%</option>
+    <option value="ninetyfiveProportion">95%</option>
+    <option value="ninetyfourProportion">94%</option>
+    <option value="ninetythreeProportion">93%</option>
+    <option value="ninetytwoProportion">92%</option>
+    <option value="ninetyoneProportion">91%</option>
+    <option value="ninetyProportion">90%</option>
+  </select><br><br>
 <label for="sampleProportion">Sample Proportion:</label><br>
   <div>.5</div><br><br>
   <label for="marginOfErrorProportion">Margin of Error:</label><br>
