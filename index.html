@@ -1,5 +1,15 @@
 <html>
 <head>
+  <script>
+function calculateMean() {
+  document.getElementById("meanDiv").style.display = "";
+}
+</script>
+  <script>
+function calculateProportion() {
+  document.getElementById("proportionDiv").style.display = "";
+}
+</script>
 <style>
 h1 {text-align: center;}
 div {text-align: center;}
@@ -20,8 +30,8 @@ div {text-align: center;}
   <div>5</div><br><br>
 <label for="marginOfErrorMean">Margin of Error:</label><br>
   <input type="text" id="marginOfErrorMean" name="marginOfErrorMean"><br><br>
-<button type="button">Calculate</button><br><br>
-  <div><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup></math></div><br><br>
+<button type="button" onclick="calculateMean()">Calculate</button><br><br>
+  <div id="meanDiv" style="display:none"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup></math></div><br><br>
 <div style="color:#CFB87C";>Calculate Sample Size for a Proportion:</div><br>
 <label for="levelOfConfidenceProportion">Level of Confidence:</label><br>
   <input type="text" id="levelOfConfidenceProportion" name="levelOfConfidenceProportion"><br><br>
@@ -29,8 +39,8 @@ div {text-align: center;}
   <div>.5</div><br><br>
   <label for="marginOfErrorProportion">Margin of Error:</label><br>
   <input type="text" id="marginOfErrorProportion" name="marginOfErrorProportion"><br><br>
-<button type="button">Calculate</button><br><br>
-  <div><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mi>z</mi><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mi>&#x3C0;</mi><mfenced><mrow><mn>1</mn><mo>-</mo><mi>&#x3C0;</mi></mrow></mfenced></math></div><br><br>
+<button type="button" onclick="calculateProportion()">Calculate</button><br><br>
+  <div id="proportionDiv" style="display:none"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mi>z</mi><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mi>&#x3C0;</mi><mfenced><mrow><mn>1</mn><mo>-</mo><mi>&#x3C0;</mi></mrow></mfenced></math></div><br><br>
 </div>
 </body>
 </html>
