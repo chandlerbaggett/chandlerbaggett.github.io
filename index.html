@@ -2,18 +2,12 @@
 <head>
   <script>
 function calculateMean() {
-  generateMeanEquationString();
   document.getElementById("meanDiv").style.display = "";
 }
 </script>
   <script>
 function calculateProportion() {
   document.getElementById("proportionDiv").style.display = "";
-}
-</script>
-  <script>
-function generateMeanEquationString() {
-  document.getElementById('meanDiv').innerHTML = '<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mo>&#x2192;</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mo>&#x2192;</mo></math>';
 }
 </script>
 <style>
@@ -47,7 +41,7 @@ div {text-align: center;}
 <label for="marginOfErrorMean">Margin of Error:</label><br>
   <input type="text" id="marginOfErrorMean" name="marginOfErrorMean"> units<br><br>
 <button type="button" onclick="calculateMean()">Calculate</button><br><br>
-  <div id="meanDiv" style="display:none"></div><br><br>
+  <div id="meanDiv" style="display:none"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mo>&#x2192;</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mo>&#x2192;</mo></math></div><br><br>
 <div style="color:#CFB87C";>Calculate Sample Size for a Proportion:</div><br>
 <label for="levelOfConfidenceProportion">Level of Confidence:</label><br>
   <select name="levelOfConfidenceProportion" id="levelOfConfidenceProportion">
