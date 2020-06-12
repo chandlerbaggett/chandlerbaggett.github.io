@@ -13,7 +13,7 @@ function calculateProportion() {
   document.getElementById("proportionDiv").style.display = "";
 }
     function generateMeanEquationString() {
-      document.getElementById('meanDiv').innerHTML = '<math><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mo>&#x2192;</mo><msup><mfenced><mfrac><mrow><mi>z</mi><mi>&#x3C3;</mi></mrow><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mo>&#x2192;</mo></math>';
+      document.getElementById('meanDiv').innerHTML = '$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$';
     }
 </script>
 <style>
@@ -47,7 +47,7 @@ div {text-align: center;}
 <label for="marginOfErrorMean">Margin of Error:</label><br>
   <input type="text" id="marginOfErrorMean" name="marginOfErrorMean"> units<br><br>
 <button type="button" onclick="calculateMean()">Calculate</button><br><br>
-  <div id="meanDiv" style="display:none" xmlns="http://www.w3.org/1998/Math/MathML"></div><br><br>
+  <div id="meanDiv" style="display:none"></div><br><br>
 <div style="color:#CFB87C";>Calculate Sample Size for a Proportion:</div><br>
 <label for="levelOfConfidenceProportion">Level of Confidence:</label><br>
   <select name="levelOfConfidenceProportion" id="levelOfConfidenceProportion">
@@ -72,7 +72,7 @@ div {text-align: center;}
     <option value="twoProportion">2%</option>
   </select><br><br><br><br>
 <button type="button" onclick="calculateProportion()">Calculate</button><br><br>
-  <div id="proportionDiv" style="display:none"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mi>z</mi><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mi>&#x3C0;</mi><mfenced><mrow><mn>1</mn><mo>-</mo><mi>&#x3C0;</mi></mrow></mfenced></math></div><br><br>
+  <div id="proportionDiv" style="display:none">$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</div><br><br>
 </div>
 </body>
 </html>
