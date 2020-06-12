@@ -58,7 +58,13 @@ div {text-align: center;}
 <label for="sampleProportion">Sample Proportion:</label><br>
   <div>.5</div><br><br>
   <label for="marginOfErrorProportion">Margin of Error:</label><br>
-  <input type="text" id="marginOfErrorProportion" name="marginOfErrorProportion"><br><br>
+    <select name="levelOfConfidenceProportion" id="levelOfConfidenceProportion">
+    <option value="sixProportion">6%</option>
+    <option value="fiveProportion">5%</option>
+    <option value="fourProportion">4%</option>
+    <option value="threeProportion">3%</option>
+    <option value="twoProportion">2%</option>
+  </select><br><br><br><br>
 <button type="button" onclick="calculateProportion()">Calculate</button><br><br>
   <div id="proportionDiv" style="display:none"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><msup><mfenced><mfrac><mi>z</mi><mi>E</mi></mfrac></mfenced><mn>2</mn></msup><mi>&#x3C0;</mi><mfenced><mrow><mn>1</mn><mo>-</mo><mi>&#x3C0;</mi></mrow></mfenced></math></div><br><br>
 </div>
