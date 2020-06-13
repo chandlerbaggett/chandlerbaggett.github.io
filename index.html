@@ -24,7 +24,7 @@ function calculateProportion() {
 	</script>
 	<script>
     function generateMeanEquationString() {
-      document.getElementById('meanDiv').innerHTML = '$$n=\\left ( \\frac{z\\sigma }{E} \\right )^{2}\\rightarrow n=\\left ( \\frac{'+document.getElementById('levelOfConfidenceMean').value+'\\sigma }{E} \\right )^{2}\\rightarrow n=$$';
+      document.getElementById('meanDiv').innerHTML = '$$n=\\left ( \\frac{z\\sigma }{E} \\right )^{2}\\rightarrow n=\\left ( \\frac{\left ( '+document.getElementById('levelOfConfidenceMean').value+' \right )\left ( 5 \right ) }{E} \\right )^{2}\\rightarrow n=$$';
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'meanDiv']);
     }
 </script>
@@ -44,15 +44,12 @@ div {text-align: center;}
 <div class="myDiv">
 <label for="levelOfConfidenceMean">Level of Confidence:</label><br>
   <select name="levelOfConfidenceMean" id="levelOfConfidenceMean">
-    <option value="ninetyeightMean">98%</option>
-    <option value="ninetysevenMean">97%</option>
-    <option value="ninetysixMean">96%</option>
-    <option value="ninetyfiveMean">95%</option>
-    <option value="ninetyfourMean">94%</option>
-    <option value="ninetythreeMean">93%</option>
-    <option value="ninetytwoMean">92%</option>
-    <option value="ninetyoneMean">91%</option>
-    <option value="ninetyMean">90%</option>
+	  <option value="2.576">99%</option>
+    <option value="2.326">98%</option>
+    <option value="1.960">95%</option>
+    <option value="1.645">90%</option>
+	  <option value="1.282">80%</option>
+	  <option value="0.674">50%</option>
   </select><br><br>
 <label for="expectedStandardDeviation">Standard Deviation:</label><br>
   <div>5 units</div><br><br>
