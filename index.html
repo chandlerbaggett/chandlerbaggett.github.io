@@ -58,9 +58,9 @@ div {text-align: center;}
 	  <option value="0.674">50%</option>
   </select><br><br>
 <label for="expectedStandardDeviation">Standard Deviation:</label><br>
-  <input type="text" id="expectedStandardDeviation" name="expectedStandardDeviation"> units<br><br>
+  <input type="text" id="expectedStandardDeviation" name="expectedStandardDeviation" maxlength="9"> units<br><br>
 <label for="marginOfErrorMean">Margin of Error:</label><br>
-  <input type="text" id="marginOfErrorMean" name="marginOfErrorMean"> units<br><br>
+  <input type="text" id="marginOfErrorMean" name="marginOfErrorMean" maxlength="9"> units<br><br>
 <button type="button" onclick="calculateMean()">Calculate</button><br><br>
   <div id="meanDiv" style="display:none"></div><br><br>
 <div style="color:#CFB87C";>Calculate Sample Size for a Proportion:</div><br>
@@ -74,7 +74,7 @@ div {text-align: center;}
 	  <option value="0.674">50%</option>
   </select><br><br>
 <label for="sampleProportion">Sample Proportion:</label><br>
-  <div>.5</div><br><br>
+  <input type="text" id="sampleProportion" name="sampleProportion" maxlength="9"> units<br><br>
   <label for="marginOfErrorProportion">Margin of Error:</label><br>
     <select name="levelOfConfidenceProportion" id="levelOfConfidenceProportion">
     <option value="sixProportion">6%</option>
