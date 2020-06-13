@@ -29,6 +29,7 @@ function calculateProportion() {
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'meanDiv']);
     }
 		else {
+			document.getElementById("meanDiv").style.display = "none";
 			alert("Format of Standard Deviation and/or Margin of Error is incorrect");
 		}
     }
