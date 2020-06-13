@@ -37,7 +37,7 @@ function calculateProportion() {
 </script>
 	<script>
     function generateMeanEquationString() {
-	    if(!isNaN(document.getElementById('expectedStandardDeviation').value) && !isNaN(document.getElementById('marginOfErrorMean').value)) {
+	    if(!isNaN(document.getElementById('expectedStandardDeviation').value) && !isNaN(document.getElementById('marginOfErrorMean').value) && Number(document.getElementById('marginOfErrorMean').value) > 0 && Number(document.getElementById('expectedStandardDeviation').value) >= 0) {
 		    sd = document.getElementById('expectedStandardDeviation').value;
 		    marginOfErrorMean = document.getElementById('marginOfErrorMean').value;
 		    levelOfConfidenceMean = document.getElementById('levelOfConfidenceMean').value;
