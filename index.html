@@ -26,7 +26,7 @@ function calculateProportion() {
 		<script>
     function generateProportionEquationString() {
 	    if(!isNaN(document.getElementById('sampleProportion').value) && Number(document.getElementById('sampleProportion').value) >= 0 && Number(document.getElementById('sampleProportion').value) <= 1) {
-      document.getElementById('proportionDiv').innerHTML = '$$n=\\left ( \\frac{z}{E} \\right )^{2}\\pi \\left ( 1-\\pi  \\right )\\rightarrow n=\\left ( \\frac{z}{E} \\right )^{2}\\pi \\left ( 1-\\pi  \\right )\\rightarrow n=$$';
+      document.getElementById('proportionDiv').innerHTML = '$$n=\\left ( \\frac{z}{E} \\right )^{2}\\pi \\left ( 1-\\pi  \\right )\\rightarrow n=\\left ( \\frac{'+document.getElementById('levelOfConfidenceProportion').value+'}{'+document.getElementById('marginOfErrorProportion').value+'} \\right )^{2}'+document.getElementById('sampleProportion').value+' \\left ( 1-'+document.getElementById('sampleProportion').value+'  \\right )\\rightarrow n=$$';
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'proportionDiv']);
     }
 		else {
@@ -95,7 +95,7 @@ div {text-align: center;}
 <label for="sampleProportion">Sample Proportion:</label><br>
   <input type="text" id="sampleProportion" name="sampleProportion" maxlength="9"><br><br>
   <label for="marginOfErrorProportion">Margin of Error:</label><br>
-    <select name="levelOfConfidenceProportion" id="levelOfConfidenceProportion">
+    <select name="marginOfErrorProportion" id="marginOfErrorProportion">
     <option value=".06">6%</option>
     <option value=".05">5%</option>
     <option value=".04">4%</option>
