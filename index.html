@@ -19,9 +19,28 @@ function calculateMean() {
 </script>
   <script>
 function calculateProportion() {
+	generateProportionEquationString();
   document.getElementById("proportionDiv").style.display = "";
 }
 	</script>
+		<script>
+    function generateProportionEquationString() {
+	    if(!isNaN(document.getElementById('sampleProportion').value) && Number(document.getElementById('sampleProportion').value) >= 0 && Number(document.getElementById('sampleProportion').value) <= 1)) {
+		    sd = document.getElementById('expectedStandardDeviation').value;
+		    marginOfErrorMean = document.getElementById('marginOfErrorMean').value;
+		    levelOfConfidenceMean = document.getElementById('levelOfConfidenceMean').value;
+		    stepOne = sd * levelOfConfidenceMean;
+		    stepTwo = stepOne / marginOfErrorMean;
+		    squared = Math.pow(stepTwo, 2);
+      document.getElementById('meanDiv').innerHTML = '$$n=\left ( \frac{z}{E} \right )^{2}\pi \left ( 1-\pi  \right )\rightarrow n=\left ( \frac{z}{E} \right )^{2}\pi \left ( 1-\pi  \right )\rightarrow n=$$';
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'proportionDiv']);
+    }
+		else {
+			document.getElementById("proportionDiv").style.display = "none";
+			alert("Format of Sample Proportion is incorrect");
+		}
+    }
+</script>
 	<script>
     function generateMeanEquationString() {
 	    if(!isNaN(document.getElementById('expectedStandardDeviation').value) && !isNaN(document.getElementById('marginOfErrorMean').value)) {
@@ -90,7 +109,7 @@ div {text-align: center;}
     <option value=".02">2%</option>
   </select><br><br><br><br>
 <button type="button" onclick="calculateProportion()">Calculate</button><br><br>
-  <div id="proportionDiv" style="display:none">$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</div><br><br>
+  <div id="proportionDiv" style="display:none"></div><br><br>
 </div>
 </body>
 </html>
