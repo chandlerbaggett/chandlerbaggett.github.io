@@ -5,7 +5,9 @@
   <script>
 function calculateMean() {
   generateMeanEquationString();
+	if(MathJax.Hub.Queue != null) {
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"meanDiv"]);
+	}
   document.getElementById("meanDiv").style.display = "";
 }
 </script>
