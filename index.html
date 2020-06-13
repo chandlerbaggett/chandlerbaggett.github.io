@@ -24,7 +24,7 @@ function calculateProportion() {
 	</script>
 	<script>
     function generateMeanEquationString() {
-      document.getElementById('meanDiv').innerHTML = '$$n=\\left ( \\frac{z\\sigma }{E} \\right )^{2}\\rightarrow n=\\left ( \\frac{\\left ( 5 \\right )\\left ( '+document.getElementById('expectedStandardDeviation').value+' \\right ) }{'+document.getElementById('marginOfErrorMean').value+'} \\right )^{2}\\rightarrow n=$$';
+      document.getElementById('meanDiv').innerHTML = '$$n=\\left ( \\frac{z\\sigma }{E} \\right )^{2}\\rightarrow n=\\left ( \\frac{\\left ( '+document.getElementById('levelOfConfidenceMean').value+' \\right )\\left ( 5 \\right ) }{'+document.getElementById('marginOfErrorMean').value+'} \\right )^{2}\\rightarrow n=$$';
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'meanDiv']);
 </script>
 <style>
