@@ -1,7 +1,5 @@
 <html>
 <head>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script>
 function calculateMean() {
   generateMeanEquationString();
@@ -13,8 +11,7 @@ function calculateProportion() {
   document.getElementById("proportionDiv").style.display = "";
 }
     function generateMeanEquationString() {
-      document.getElementById('meanDiv').innerHTML = '$$\\begin{array}{cc} a & b \\\\ c & d \\end{array}$$';
-      MathJax.Hub.Queue(["Typeset",MathJax.Hub,"meanDiv"]);
+      document.getElementById('meanDiv').innerHTML = '<math>H(s) = ∫<sub>0</sub><sup>∞</sup> e<sup>-st</sup> h(t) dt</math>';
     }
 </script>
 <style>
