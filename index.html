@@ -6,6 +6,8 @@
 function calculateMean() {
   generateMeanEquationString();
   document.getElementById("meanDiv").style.display = "";
+	const elem = MathJax.Hub.getAllJax('meanDiv')[0]
+      MathJax.Hub.Queue(['Text', elem, latex])
 }
 </script>
   <script>
