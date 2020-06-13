@@ -25,8 +25,7 @@ function calculateProportion() {
 	<script>
     function generateMeanEquationString() {
       document.getElementById('meanDiv').innerHTML = '$$\\frac{1}{\\sqrt{x^2 + 1}}$$';
-	    	const elem = MathJax.Hub.getAllJax('meanDiv')[0];
-      MathJax.Hub.Queue(['Text', elem, latex]);
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'meanDiv']);
     }
 </script>
 <style>
