@@ -5,8 +5,6 @@
   <script>
 function calculateMean() {
   generateMeanEquationString();
-	var hub = MathJax.Hub;
-	hub.Queue(["Typeset",MathJax.Hub,"meanDiv"]);
   document.getElementById("meanDiv").style.display = "";
 }
 </script>
@@ -16,7 +14,6 @@ function calculateProportion() {
 }
     function generateMeanEquationString() {
       document.getElementById('meanDiv').innerHTML = '$$\\frac{1}{\\sqrt{x^2 + 1}}$$';
-	    // MathJax.Hub.Queue(["Typeset",MathJax.Hub,"meanDiv"]);
     }
 </script>
 <style>
