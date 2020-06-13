@@ -29,7 +29,7 @@ function calculateProportion() {
 		    	    stepOne = document.getElementById('levelOfConfidenceProportion').value / document.getElementById('marginOfErrorProportion').value;
 	    squared = Math.pow(stepOne, 2);
 	    stepThree = squared * document.getElementById('sampleProportion').value * (1 - document.getElementById('sampleProportion').value);
-      document.getElementById('proportionDiv').innerHTML = '$$n=\\left ( \\frac{z}{E} \\right )^{2}\\pi \\left ( 1-\\pi  \\right )\\rightarrow n=\\left ( \\frac{'+document.getElementById('levelOfConfidenceProportion').value+'}{'+document.getElementById('marginOfErrorProportion').value+'} \\right )^{2}'+document.getElementById('sampleProportion').value+' \\left ( 1-'+document.getElementById('sampleProportion').value+'  \\right )\\rightarrow n='+Math.ceil(stepThree)+' sample(s)$$';
+      document.getElementById('proportionDiv').innerHTML = '$$n=\\left ( \\frac{z}{E} \\right )^{2}\\pi \\left ( 1-\\pi  \\right )\\rightarrow n=\\left ( \\frac{'+document.getElementById('levelOfConfidenceProportion').value+'}{'+document.getElementById('marginOfErrorProportion').value+'} \\right )^{2}'+document.getElementById('sampleProportion').value+' \\left ( 1-'+document.getElementById('sampleProportion').value+'  \\right )\\rightarrow n='+Math.ceil(stepThree)+'$$ sample(s)';
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'proportionDiv']);
 		    window.scrollTo(0,document.body.scrollHeight);
     }
@@ -48,7 +48,7 @@ function calculateProportion() {
 		    stepOne = sd * levelOfConfidenceMean;
 		    stepTwo = stepOne / marginOfErrorMean;
 		    squared = Math.pow(stepTwo, 2);
-      document.getElementById('meanDiv').innerHTML = '$$n=\\left ( \\frac{z\\sigma }{E} \\right )^{2}\\rightarrow n=\\left ( \\frac{\\left ( '+document.getElementById('levelOfConfidenceMean').value+' \\right )\\left ( '+document.getElementById('expectedStandardDeviation').value+' \\right ) }{'+document.getElementById('marginOfErrorMean').value+'} \\right )^{2}\\rightarrow n='+Math.ceil(squared)+' sample(s)$$';
+      document.getElementById('meanDiv').innerHTML = '$$n=\\left ( \\frac{z\\sigma }{E} \\right )^{2}\\rightarrow n=\\left ( \\frac{\\left ( '+document.getElementById('levelOfConfidenceMean').value+' \\right )\\left ( '+document.getElementById('expectedStandardDeviation').value+' \\right ) }{'+document.getElementById('marginOfErrorMean').value+'} \\right )^{2}\\rightarrow n='+Math.ceil(squared)+'$$ sample(s)';
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'meanDiv']);
     }
 		else {
