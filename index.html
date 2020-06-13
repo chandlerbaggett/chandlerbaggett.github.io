@@ -24,8 +24,13 @@ function calculateProportion() {
 	</script>
 	<script>
     function generateMeanEquationString() {
+	    if(!isNaN(document.getElementById('expectedStandardDeviation').value) && !isNaN(document.getElementById('marginOfErrorMean').value)) {
       document.getElementById('meanDiv').innerHTML = '$$n=\\left ( \\frac{z\\sigma }{E} \\right )^{2}\\rightarrow n=\\left ( \\frac{\\left ( '+document.getElementById('levelOfConfidenceMean').value+' \\right )\\left ( '+document.getElementById('expectedStandardDeviation').value+' \\right ) }{'+document.getElementById('marginOfErrorMean').value+'} \\right )^{2}\\rightarrow n=$$';
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'meanDiv']);
+    }
+		else {
+			alert("Format of Standard Deviation and/or Margin of Error is incorrect");
+		}
     }
 </script>
 <style>
