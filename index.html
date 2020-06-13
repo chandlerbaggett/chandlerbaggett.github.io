@@ -26,13 +26,7 @@ function calculateProportion() {
 		<script>
     function generateProportionEquationString() {
 	    if(!isNaN(document.getElementById('sampleProportion').value) && Number(document.getElementById('sampleProportion').value) >= 0 && Number(document.getElementById('sampleProportion').value) <= 1)) {
-		    sd = document.getElementById('expectedStandardDeviation').value;
-		    marginOfErrorMean = document.getElementById('marginOfErrorMean').value;
-		    levelOfConfidenceMean = document.getElementById('levelOfConfidenceMean').value;
-		    stepOne = sd * levelOfConfidenceMean;
-		    stepTwo = stepOne / marginOfErrorMean;
-		    squared = Math.pow(stepTwo, 2);
-      document.getElementById('meanDiv').innerHTML = '$$n=\left ( \frac{z}{E} \right )^{2}\pi \left ( 1-\pi  \right )\rightarrow n=\left ( \frac{z}{E} \right )^{2}\pi \left ( 1-\pi  \right )\rightarrow n=$$';
+      document.getElementById('proportionDiv').innerHTML = '$$n=\\left ( \\frac{z}{E} \\right )^{2}\\pi \\left ( 1-\\pi  \\right )\\rightarrow n=\\left ( \\frac{z}{E} \\right )^{2}\\pi \\left ( 1-\\pi  \\right )\\rightarrow n=$$';
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,'proportionDiv']);
     }
 		else {
