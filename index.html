@@ -74,14 +74,14 @@ div {text-align: center;}
 	  <option value="0.674">50%</option>
   </select><br><br>
 <label for="sampleProportion">Sample Proportion:</label><br>
-  <input type="text" id="sampleProportion" name="sampleProportion" maxlength="9"> units<br><br>
+  <input type="text" id="sampleProportion" name="sampleProportion" maxlength="9"><br><br>
   <label for="marginOfErrorProportion">Margin of Error:</label><br>
     <select name="levelOfConfidenceProportion" id="levelOfConfidenceProportion">
-    <option value="sixProportion">6%</option>
-    <option value="fiveProportion">5%</option>
-    <option value="fourProportion">4%</option>
-    <option value="threeProportion">3%</option>
-    <option value="twoProportion">2%</option>
+    <option value=".06">6%</option>
+    <option value=".05">5%</option>
+    <option value=".04">4%</option>
+    <option value=".03">3%</option>
+    <option value=".02">2%</option>
   </select><br><br><br><br>
 <button type="button" onclick="calculateProportion()">Calculate</button><br><br>
   <div id="proportionDiv" style="display:none">$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</div><br><br>
